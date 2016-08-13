@@ -14,6 +14,9 @@ gem 'clarifai_ruby', '~> 0.1.2'
 # Yelp API
 gem 'yelp', require: 'yelp'
 
+# User authentication
+gem 'devise', '~> 4.2'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
