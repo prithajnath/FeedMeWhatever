@@ -3,3 +3,5 @@
 <% @user.pictures.each do |p|%>
 	<%= link_to image_tag(p.url, size: "200x200"),{:controller => "display", :action => "show", :id => p.id} %>
 <% end %>
+
+<%= link_to "Back to home", home_main_path%>

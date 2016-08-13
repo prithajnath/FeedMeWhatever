@@ -10,15 +10,19 @@
     <% end %>
   <% end %>
 <% end %>  
-<h1>HERE IS THE BEST WORD</h1>
-<h2> <%= word %> with a probability of <%= max%> </h2>
 
-<h2>Yelp Shit</h2>
-<% params = { term: '#{@word}',
+<h1> It's  <%= word %> !!!</h1>
+<h2>We are <%= (max*100).to_s[0..4]%>% sure :)</h2>
+
+<h2>Places you can find it</h2>
+<% params = { term: word.to_s,
            limit: 3
          }
 
 locale = { lang: 'en' } %>
-<% Yelp.client.search('New York').instance_values["businesses"].each do |f| %>
+<% Yelp.client.search('New York',params, locale).instance_values["businesses"].each do |f| %>
 <h4><%=  f.name %></h4>
+<h5><%= f.location.address[0] %>, <%= f.location.city %>, <%= f.location.postal_code %></h5>
 <% end %>
+
+<%= link_to "Back to profile", profile_index_path %>
