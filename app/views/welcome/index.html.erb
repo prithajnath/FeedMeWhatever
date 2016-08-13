@@ -1,6 +1,7 @@
 <% @something.tag_images.each do |c| %>
   <% c.instance_values["tags_by_words"].each do |d| %>
-  <h2>  <%= d %> </h2>
+  <p>  <%= d %> </p>
    <% end %>
 <% end %>  
-
+<h2>Yelp Shit</h2>
+<%= Yelp.client.search('San Francisco').instance_values %>

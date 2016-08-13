@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+require 'yelp'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -25,7 +26,6 @@ module Workspace
   end
 end
 
-
 ClarifaiRuby.configure do |config|
   config.base_url       = "https://api.clarifai.com"
   config.version_path   = "/v1"
@@ -33,10 +33,10 @@ ClarifaiRuby.configure do |config|
   config.client_secret  = "gPDW_nq8pf_2HWpOgubSOVJt4Kca2gTRZlBN_5EO"
 end
 
-require 'yelp'
-
-client = Yelp::Client.new({ consumer_key: dwbeqqRFF7Gv_x6WXMAJig,
-                            consumer_secret: w8E5hS4WJeMM0lb_yZ0y2jcYH-Y,
-                            token: PNvhg4nuDqMV_W0ViEUEqJXhQeGMJN0B,
-                            token_secret: G2xA0OB-7o7Qr39PEdbwDfOPZ30
-                          })
+Yelp.client.configure do |config|
+  config.consumer_key =  "dwbeqqRFF7Gv_x6WXMAJig"
+  config.consumer_secret = "w8E5hS4WJeMM0lb_yZ0y2jcYH-Y"
+  config.token = "PNvhg4nuDqMV_W0ViEUEqJXhQeGMJN0B"
+  config.token_secret =  "G2xA0OB-7o7Qr39PEdbwDfOPZ30"
+end
+  
