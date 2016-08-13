@@ -15,9 +15,7 @@
 <h2>We are <%= (max*100).to_s[0..4]%>% sure :)</h2>
 
 <h2>Places you can find it</h2>
-<% params = { term: word.to_s,
-           limit: 3
-         }
+<% params = { term: word.to_s }
 
 locale = { lang: 'en' } %>
 <% Yelp.client.search('New York',params, locale).instance_values["businesses"].each do |f| %>
