@@ -1,4 +1,6 @@
 <% @something.tag_images.each do |c| %>
-  <%= c.instance_values["tags_by_words"] %>
+  <% c.instance_values["tags_by_words"].each do |d| %>
+  <h2>  <%= d %> </h2>
+   <% end %>
 <% end %>  
 
