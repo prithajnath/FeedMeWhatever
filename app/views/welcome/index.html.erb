@@ -1,7 +1,27 @@
+<% max = 0 %>
+<% word = "" %>
 <% @something.tag_images.each do |c| %>
-  <% c.instance_values["tags_by_words"].each do |d| %>
-  <p>  <%= d %> </p>
-   <% end %>
+  <% c.instance_values["tags"].each do |f| %>
+    <h2>word</h2><%= f.word  %>
+    <h2>probability</h2> <%= f.prob %>
+    <% if f.prob > max%>
+      <% max = f.prob %>
+      <% word = f.word%>
+    <% else %>
+      <% next %>
+    <% end %>
+  <% end %>
 <% end %>  
+<h1>HERE IS THE BEST WORD</h1>
+<h2> <%= word %> with a probability of <%= max%> </h2>
+
 <h2>Yelp Shit</h2>
-<%= Yelp.client.search('San Francisco').instance_values %>
+<% params = { term: 'taco',
+           limit: 3,
+           category_filter: 'discgolf'
+         }
+
+locale = { lang: 'en' } %>
+<% Yelp.client.search('New York').instance_values["businesses"].each do |f| %>
+<h4><%=  f.name %></h4>
+<% end %>
