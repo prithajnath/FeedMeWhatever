@@ -11,6 +11,9 @@ gem 'sass-rails', '~> 5.0'
 # Clarifai API
 gem 'clarifai_ruby', '~> 0.1.2'
 
+# Yelp API
+gem 'yelp', require: 'yelp'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

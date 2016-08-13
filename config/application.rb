@@ -32,3 +32,11 @@ ClarifaiRuby.configure do |config|
   config.client_id      = "OOkPv2W6PxyoXv2PEG376B0jWQsD6WHfMLdX8Xn8"
   config.client_secret  = "gPDW_nq8pf_2HWpOgubSOVJt4Kca2gTRZlBN_5EO"
 end
+
+require 'yelp'
+
+client = Yelp::Client.new({ consumer_key: dwbeqqRFF7Gv_x6WXMAJig,
+                            consumer_secret: w8E5hS4WJeMM0lb_yZ0y2jcYH-Y,
+                            token: PNvhg4nuDqMV_W0ViEUEqJXhQeGMJN0B,
+                            token_secret: G2xA0OB-7o7Qr39PEdbwDfOPZ30
+                          })
