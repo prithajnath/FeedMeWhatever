@@ -2,8 +2,6 @@
 <% word = "" %>
 <% @something.tag_images.each do |c| %>
   <% c.instance_values["tags"].each do |f| %>
-    <h2>word</h2><%= f.word  %>
-    <h2>probability</h2> <%= f.prob %>
     <% if f.prob > max%>
       <% max = f.prob %>
       <% word = f.word%>
@@ -16,9 +14,8 @@
 <h2> <%= word %> with a probability of <%= max%> </h2>
 
 <h2>Yelp Shit</h2>
-<% params = { term: 'taco',
-           limit: 3,
-           category_filter: 'discgolf'
+<% params = { term: '#{@word}',
+           limit: 3
          }
 
 locale = { lang: 'en' } %>
