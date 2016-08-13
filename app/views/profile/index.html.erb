@@ -1,0 +1,5 @@
+<h1>Hey there <%= @user.first_name %></h1>
+<h2> Here's all your pictures </h2>
+<% @user.pictures.each do |p|%>
+	<%= image_tag(p.url, size: "200x200") %>
+<% end %>
