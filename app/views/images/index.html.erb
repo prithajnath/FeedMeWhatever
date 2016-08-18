@@ -1,0 +1,5 @@
+<%= form_for @img, html: { multipart: true } do |form| %>
+  <%= form.file_field :pic %>
+  <%= form.submit "Upload"%>
+<% end %>
+

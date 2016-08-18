@@ -9,6 +9,9 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 
 
+# File Attachments
+gem 'paperclip', '~> 5.0'
+
 # Bootstrap 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
