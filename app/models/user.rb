@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :pictures
   has_one :listing
-
+  has_attached_file :profile_pic
 
 end

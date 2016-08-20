@@ -1,11 +1,13 @@
 <h1>Hey there <%= @user.first_name %></h1>
+<%= image_tag @user.profile_pic.url, size: "200x300" %>
 <h2> Here's all your pictures </h2>
 <% @user.pictures.each do |p|%>
 	<%= link_to image_tag(p.url, size: "200x200"),{:controller => "display", :action => "show", :id => p.id} %>
 <% end %>
-
-<% @user.listing.images.each do |i|%>
-  <%= image_tag i.pic.url %>
+<% if @user.listing.images %>
+  <% @user.listing.images.each do |i|%>
+    <%= image_tag i.pic.url %>
+  <% end %>
 <% end %>
 
 <%= link_to "Back to home", home_main_path%>
