@@ -11,7 +11,7 @@
 <% end %>
 <% if @user.listing.images %>
   <% @user.listing.images.each do |i|%>
-    <%= image_tag i.pic.url %>
+    <%= link_to image_tag(i.pic.url, size: "200x200"), {:controller => "display", :action => "show", :id => i.id} %>
   <% end %>
 <% end %>
 
