@@ -1,5 +1,10 @@
 <h1>Hey there <%= @user.first_name %></h1>
 <%= image_tag @user.profile_pic.url, size: "200x300" %>
+
+
+
+
+
 <h2> Here's all your pictures </h2>
 <% @user.pictures.each do |p|%>
 	<%= link_to image_tag(p.url, size: "200x200"),{:controller => "display", :action => "show", :id => p.id} %>
