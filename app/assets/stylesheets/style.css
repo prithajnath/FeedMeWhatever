@@ -12,6 +12,7 @@ body{
   -moz-column-gap:      0px;
   column-count:         5;
   column-gap:           0px;  
+  overflow-x: hidden;
 }
 
 #photos img {
