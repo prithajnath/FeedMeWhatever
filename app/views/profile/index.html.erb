@@ -1,11 +1,15 @@
 <br><br><br>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-5">
 <%= image_tag @user.profile_pic.url, size: "200x300", class: 'profile_pic' %>
 <br>
 <h1> <%= @user.first_name %></h1>
 <p><%= @user.bio %></p>
 <p><%= @user.location%></p>
-
+    </div>
+  </div>
+</div>
 
 
 <h2> Here's all your pictures </h2>
