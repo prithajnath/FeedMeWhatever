@@ -49,3 +49,11 @@ body{
   column-count:         1;
   }
 }
+
+
+.profile_pic{
+    border-radius: 118px;
+    height: 198px;
+}
+
+}
