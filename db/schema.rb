@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160819030316) do
+ActiveRecord::Schema.define(version: 20161031012115) do
 
   create_table "images", force: :cascade do |t|
     t.integer  "listing_id"
@@ -59,6 +59,9 @@ ActiveRecord::Schema.define(version: 20160819030316) do
     t.string   "profile_pic_content_type"
     t.integer  "profile_pic_file_size"
     t.datetime "profile_pic_updated_at"
+    t.text     "bio"
+    t.datetime "dob"
+    t.string   "location"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
